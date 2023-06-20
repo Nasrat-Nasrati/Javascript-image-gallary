@@ -1,0 +1,57 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Search and Replace Project</title>
+    <link rel="stylesheet" href="Sytel.css" type="text/css">
+</head>
+<body>
+    <div class="main">
+
+        <label for="find"> Find:</label>
+        <input type="text" name="find" id="find" placeholder="please type your word">
+        <br>
+        <br>
+        <label for="replace"> Replace:</label>
+        <input type="text" name="replace" id="replace" placeholder="please type your replace word">
+
+        <div class="text" id="text">
+            
+                Video provides a powerful way to help you prove your point. When you click 
+                Online Video, you can paste in the embed 
+                code for the video you want to add. You can also type a keyword to search
+                 online for the video that best fits your document.
+            
+        </div>
+
+        <button onclick="findid()"> Action </button>
+       
+    </div>
+</body>
+<script> 
+function findid(){
+    let x=document.getElementById('find').value;
+    let y=document.getElementById('replace').value;
+    let z=document.getElementById('text').innerHTML;   
+    
+    let array= z.split(" ");
+    document.getElementById('text').innerHTML="";  
+}
+
+for( let i=0; i<array.length;i++){
+if(array[i]==x){
+    array[i]=y;
+}
+console.log(array);
+// document.getElementById('text').innerHTML+=myarray[i]+" ";
+}
+
+
+
+</script>
+
+</html>
